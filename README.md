@@ -6,11 +6,11 @@
 ## How to use
 * Ensure keyboard shortcuts is enabled in Gmail Settings
 * Have the Gmail tab opened before running
-* Run UIPath file
+* Run UIPath file in UIPath Desktop Studio
 
 ## Why I built it
 * I was manually searching for a sender's email, selecting all conversations, and confirming deletion — the same repetitive steps every time. I realized this was a perfect opportunity to practice UiPath and let the bot handle it.
 
 ## Tools used
-* UiPath Studio
+* UiPath Desktop Studio
 * Gmail
