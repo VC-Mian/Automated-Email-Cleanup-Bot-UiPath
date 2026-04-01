@@ -1,0 +1,241 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="UiPathEventConnector" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEvent" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEventObjectType" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEventObjectId" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathAdditionalEventData" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Main.UiPathEventConnector>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.UiPathEventConnector>
+  <this:Main.UiPathEvent>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.UiPathEvent>
+  <this:Main.UiPathEventObjectType>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.UiPathEventObjectType>
+  <this:Main.UiPathEventObjectId>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.UiPathEventObjectId>
+  <this:Main.UiPathAdditionalEventData>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.UiPathAdditionalEventData>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1474,3249" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="companyEmail" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap:VirtualizedContainerService.HintSize="524,79" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="524,275" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter the company email to delete emails from:" Title="Gmail Cleanup Bot" TopMost="False">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[companyEmail]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Not String.IsNullOrEmpty(companyEmail)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="524,2872" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+      <ui:InterruptibleWhile.Body>
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,2750" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,2690" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7181378d-8ff1-48ce-a4fa-84225dba5e7f" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,2496" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,194" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7181378d-8ff1-48ce-a4fa-84225dba5e7f" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="mail.google.com/mail/u/0" ContentHash="3-Ntadg8rEuqmtbFfmn1hw" DesignTimeRectangle="319, 195, 195, 20" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" Guid="3dbf8965-ebd2-4cba-b6ec-670fad9aedfe" InformativeScreenshot="16d7fa745959e099e5592400c8eb5db8.jpg" Reference="CkcK2wLPkkSpWlX3AA0jVw/Q8gHktOAw0qoXc3LRs75RA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Inbox (16,913) - vmc07771@gmail.com - Gmail' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,246" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="7181378d-8ff1-48ce-a4fa-84225dba5e7f" Text="[companyEmail]" Version="V5">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="mail.google.com/mail/u/0" ContentHash="3-Ntadg8rEuqmtbFfmn1hw" DesignTimeRectangle="319, 195, 195, 20" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" Guid="3dbf8965-ebd2-4cba-b6ec-670fad9aedfe" InformativeScreenshot="16d7fa745959e099e5592400c8eb5db8.jpg" Reference="CkcK2wLPkkSpWlX3AA0jVw/Q8gHktOAw0qoXc3LRs75RA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Inbox (16,913) - vmc07771@gmail.com - Gmail' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                  </uix:NTypeInto>
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InteractionMode="HardwareEvents" ScopeIdentifier="7181378d-8ff1-48ce-a4fa-84225dba5e7f" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V5" />
+                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="452,123" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Checkbox'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,194" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7181378d-8ff1-48ce-a4fa-84225dba5e7f" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="mail.google.com/mail/u/0" DesignTimeRectangle="96, 315, 20, 20" ElementType="CheckBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='checkbox' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' tag='SPAN' /&gt;" Guid="bc4b48e9-f09a-4e6a-8a37-efe29584afc9" InformativeScreenshot="1189d81336d17d9909019ffecec1271a.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Search results - vmc07771@gmail.com - Gmail' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Select all conversation…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,194" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7181378d-8ff1-48ce-a4fa-84225dba5e7f" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="mail.google.com/mail/u/0" ContentHash="rh-uFPyU80mWcyG0gT8g9g" DesignTimeRectangle="965, 359, 322, 36" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='link' tag='SPAN' /&gt;" Guid="c9238955-3490-4e6e-965b-b78f60dd9229" InformativeScreenshot="85fde4c3aee91b02448e42d43828a032.jpg" Reference="CkcK2wLPkkSpWlX3AA0jVw/NwhrrPE66Eq6sE_fhgK5Zw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Search results - vmc07771@gmail.com - Gmail' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,257" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" InteractionMode="HardwareEvents" ScopeIdentifier="7181378d-8ff1-48ce-a4fa-84225dba5e7f" Shortcuts="[d(hk)][d(shift)]3[u(shift)][u(hk)]" Version="V5" />
+                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="452,123" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                  <uix:NCheckState DisplayName="Check App State 'OK'" EnableIfNotExists="False" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,582" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="7181378d-8ff1-48ce-a4fa-84225dba5e7f" Version="V5">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,245" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7181378d-8ff1-48ce-a4fa-84225dba5e7f" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="mail.google.com/mail/u/0" DesignTimeRectangle="1156, 647, 68, 40" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='UTNHae' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;span' idx='2' tag='SPAN' /&gt;" Guid="6d80f460-9e4f-403f-8307-ade60f23ff4d" InformativeScreenshot="0e86ede6ebf01d770dd8a3d759aafc12.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Search results - vmc07771@gmail.com - Gmail' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="mail.google.com/mail/u/0" ContentHash="_OovZ5_O-kaWEwkfMQoH9g" DesignTimeRectangle="1156, 647, 68, 40" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='UTNHae' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;span' idx='2' tag='SPAN' /&gt;" Guid="6d80f460-9e4f-403f-8307-ade60f23ff4d" InformativeScreenshot="0e86ede6ebf01d770dd8a3d759aafc12.jpg" Reference="CkcK2wLPkkSpWlX3AA0jVw/3eOrDTEtD0qPMeOjuSHMlw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Search results - vmc07771@gmail.com - Gmail' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="452,266" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Done! Enter another company email or press  to exit" Title="Gmail Cleanup Bot" TopMost="False">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[companyEmail]</OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.OCREngine>
+              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                <ActivityFunc.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                </ActivityFunc.Argument>
+              </ActivityFunc>
+            </uix:NApplicationCard.OCREngine>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-967, 0, 974, 1039" BrowserType="Chrome" ContentHash="t5-NpqMj4USzGngJduV0RQ" IconBase64="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" InformativeScreenshot="17355ef69356db983b03ae74e2fbdd6a.jpg" Reference="CkcK2wLPkkSpWlX3AA0jVw/qZHj3paWHUizeBXlumzwrQ" Selector="&lt;html app='chrome.exe' title='* - Gmail*' /&gt;" Url="https://mail.google.com/mail/u/0/#inbox" Version="V2" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </Sequence>
+      </ui:InterruptibleWhile.Body>
+    </ui:InterruptibleWhile>
+  </Sequence>
+</Activity>
